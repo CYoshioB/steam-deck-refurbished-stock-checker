@@ -37,9 +37,11 @@ Before using this script, ensure the following dependencies are installed:
     ```sh
     chmod +x script.sh
     ```
-    - Add `script.sh` to a cron job to check for stock periodically (every 5 minutes in this example):
+    - Add `script.sh` to a cron job to automatically run on startup 
+      and check for stock periodically (every 5 minutes in this example):
     ```sh
     */5 * * * * /bin/bash /path/to/steam-deck-stock-checker/script.sh
+    @reboot     /bin/bash /path/to/steam-deck-stock-checker/script.sh
     ```
 
 ## Disclaimer
