@@ -19,7 +19,7 @@ product_titles = [
     "Steam Deck 256GB LCD - Valve Certified Refurbished",
     "Steam Deck 512GB LCD - Valve Certified Refurbished",
 ]
-debug = True # Set to True to always send a notification with a screenshot
+debug = False # Set to True to always send a notification with a screenshot
 
 # Set up Selenium Firefox WebDriver options
 options = Options()
