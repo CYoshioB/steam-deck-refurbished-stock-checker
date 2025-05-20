@@ -1,6 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -8,19 +8,19 @@ import time
 import requests
 
 # Configurations
-webhook_url = "YOUR_DISCORD_WEBHOOK_URL"
+webhook_url = "https://discord.com/api/webhooks/1336638274407497728/B4PyXd1SSpFnm3y48X4qwILvdJHWP0qAiVdsgWh37F7qN1wTkBLv2fXhfFBXhT9pRlXD"
 page_url = "https://store.steampowered.com/sale/steamdeckrefurbished/"
-debug = False  # Set to True to always send a notification with a screenshot
+debug = True  # Set to True to always send a notification with a screenshot
 
 # Set up Selenium WebDriver options
 options = Options()
-options.add_argument('-headless')  # Run in headless mode
-options.add_argument('-no-sandbox')
-options.add_argument('-disable-dev-shm-usage')
-service = Service()
+options.add_argument('--headless')  # Run in headless mode
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+service = Service("/usr/bin/chromedriver")
 
 # Start WebDriver
-driver = webdriver.Firefox(service=service, options=options)
+driver = webdriver.Chrome(service=service, options=options)
 try:
     driver.get(page_url)
 
