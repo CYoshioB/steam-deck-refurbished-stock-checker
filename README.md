@@ -4,6 +4,11 @@
 
 This project provides a script to monitor the availability of refurbished Steam Deck units on the official store page and send a notification to a specified Discord channel when stock is detected. The script uses Selenium for web scraping and a Discord webhook for notifications.
 
+## Additional Descr.
+
+This project is a fork of an original work by AlexFigas, which can be found [here](github.com/AlexFigas/steam-deck-refurbished-stock-checker).
+It has been updated to work with Firefox, and can be be easily modified to work with other browsers.
+
 ## Prerequisites
 
 Before using this script, ensure the following dependencies are installed:

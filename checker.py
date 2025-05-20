@@ -11,7 +11,7 @@ from env import DISCORD_WEBHOOK_URL
 # Configurations
 webhook_url = DISCORD_WEBHOOK_URL
 page_url = "https://store.steampowered.com/sale/steamdeckrefurbished/"
-debug = False  # Set to True to always send a notification with a screenshot
+debug = False # Set to True to always send a notification with a screenshot
 
 # Set up Selenium Firefox WebDriver options
 options = Options()
