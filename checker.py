@@ -1,6 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -13,16 +13,17 @@ webhook_url = DISCORD_WEBHOOK_URL
 page_url = "https://store.steampowered.com/sale/steamdeckrefurbished/"
 debug = False  # Set to True to always send a notification with a screenshot
 
-# Set up Selenium WebDriver options
+# Set up Selenium Firefox WebDriver options
 options = Options()
-options.add_argument('--headless')  # Run in headless mode
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
-service = Service("/usr/bin/chromedriver")
+options.add_argument('-headless')
+options.add_argument('-no-sandbox')
+options.add_argument('-disable-dev-shm-usage')
+service = Service()
 
 # Start WebDriver
-driver = webdriver.Chrome(service=service, options=options)
+driver = webdriver.Firefox(service=service, options=options)
 waitTime = 5    # Allow page to load in its entirety
+
 try:
     driver.get(page_url)
 
