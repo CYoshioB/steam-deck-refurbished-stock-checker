@@ -6,9 +6,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import requests
+from env import DISCORD_WEBHOOK_URL
 
 # Configurations
-webhook_url = "https://discord.com/api/webhooks/1336638274407497728/B4PyXd1SSpFnm3y48X4qwILvdJHWP0qAiVdsgWh37F7qN1wTkBLv2fXhfFBXhT9pRlXD"
+webhook_url = DISCORD_WEBHOOK_URL
 page_url = "https://store.steampowered.com/sale/steamdeckrefurbished/"
 debug = False  # Set to True to always send a notification with a screenshot
 
